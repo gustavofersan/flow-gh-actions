@@ -4,7 +4,9 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [12, 14, 16, 20]
+        node-version: [14, 16, 20]
+        include:
+          - node-version: 18
     runs-on: ubuntu-latest
     steps:
       - name: Get code
